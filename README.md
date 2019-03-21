@@ -5,3 +5,12 @@
 #### Store articles in Mongo via Mongoose.
 
 #### Users can comment on &amp; favorite articles.
+
+## Folder Structure
+
+- config
+- controllers
+- models
+- public
+- scripts
+- views

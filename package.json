@@ -4,7 +4,7 @@
   "description": "Scrape news articles via axios &amp; cheerio. Store articles in Mongo via Mongoose. Users can comment &amp; favorite articles",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
