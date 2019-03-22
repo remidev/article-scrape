@@ -2,6 +2,7 @@
 var axios = require("axios");
 var cheerio = require("cheerio");
 var express = require("express");
+var exphbs = require("express-handlebars");
 var mongoose = require("mongoose");
 var logger = require("morgan");
 
@@ -20,10 +21,16 @@ app.use(router);
 // Make Public Folder Static
 app.use(express.static(__dirname + "/public"));
 
+// Set View Engine
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
 // Listen On Port
 app.listen(PORT, function() {
-  console.log("Listening on port: " + PORT);
+  console.log("Server listening on: http://localhost:" + PORT);
 });
+
+//=========================================
 
 // // __Require all models__
 // //var db = require("./models");
