@@ -2,8 +2,8 @@
 
 ### _**[deployed version]()**_
 
-![ "Project Summary"](public\assets\images\mongo-scrape-summary.png)
+![alt txt](public/assets/images/mongo-scrape-summary.png "Project Summary")
 
 ---
 
-![ "MCV Diagram"](public\assets\images\mongo-scrape-mvc.png)
+![alt txt](public/assets/images/mongo-scrape-mvc.png "MVC Diagram")
