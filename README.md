@@ -1,16 +1,3 @@
-# article-scrape
+# **mongo-scraper**
 
-#### Scrape news articles via axios &amp; cheerio.
-
-#### Store articles in Mongo via Mongoose.
-
-#### Users can comment on &amp; favorite articles.
-
-## Folder Structure
-
-- config
-- controllers
-- models
-- public
-- scripts
-- views
+### _**[deployed version](https://evening-shelf-16534.herokuapp.com/)**_
