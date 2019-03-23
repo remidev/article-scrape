@@ -13,6 +13,7 @@ var headlineSchema = new Schema({
   headline: {
     type: String,
     required: true,
+    // unique index prevents content with duplicate headlines
     unique: { index: { unique: true } }
   },
   // summary, a string, must be entered

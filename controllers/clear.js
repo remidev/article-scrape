@@ -1,3 +1,4 @@
+// Controller to remove all content
 var db = require("../models");
 
 module.exports = {

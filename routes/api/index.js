@@ -1,3 +1,4 @@
+// Consolidate and export all api routes
 var router = require("express").Router();
 var fetchRoutes = require("./fetch");
 var noteRoutes = require("./notes");

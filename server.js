@@ -1,20 +1,24 @@
 // Require dependencies
-var express = require("express");
-var mongoose = require("mongoose");
-var exphbs = require("express-handlebars");
+const express = require("express"),
+  mongoose = require("mongoose"),
+  exphbs = require("express-handlebars"),
+  logger = require("morgan");
 
-// Set port to Heroku designated port, or 3000
-var PORT = process.env.PORT || 3000;
+// Port configuration for local/Heroku
+const PORT = process.env.PORT || process.argv[2] || 8080;
 
 // Instantiate express app
-var app = express();
+const app = express();
 
 // Require routes
-var routes = require("./routes");
+const routes = require("./routes");
 
 // Parse request body as JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+// logger
+app.use(logger("dev"));
 
 // Make public a static folder
 app.use(express.static("public"));
@@ -27,13 +31,28 @@ app.set("view engine", "handlebars");
 app.use(routes);
 
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
-var MONGODB_URI =
-  process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
-
-// Connect to the Mongo DB
-mongoose.connect(MONGODB_URI);
+const uri = process.env.MONGODB_URI || "mongodb://localhost/mongo-scraper";
+const options = {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useFindAndModify: false
+};
+mongoose.connect(uri, options).then(
+  result => {
+    /** ready to use. The `mongoose.connect()` promise resolves to undefined. */
+    console.log(
+      `Connected to database '${result.connections[0].name}' on ${
+        result.connections[0].host
+      }:${result.connections[0].port}`
+    );
+  },
+  err => {
+    /** handle initial connection error */
+    console.log("There was an error with your connection:", err);
+  }
+);
 
 // Listen On Port
 app.listen(PORT, function() {
-  console.log("Server listening on: http://localhost:" + PORT);
+  console.log("Server listening on: localhost:" + PORT);
 });
