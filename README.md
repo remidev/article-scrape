@@ -2,8 +2,8 @@
 
 ### _**[deployed version]()**_
 
-![ "Project Summary"](https://drive.google.com/open?id=1cQqnepJqmUyfwCmolKbYp_17OYpNfg7T)
+![ "Project Summary"](public\assets\images\mongo-scrape-summary.png)
 
 ---
 
-![ "MCV Diagram"](https://drive.google.com/open?id=1G9n0JDmthqZIwSK-Yere7ZPPY_mrmqbR)
+![ "MCV Diagram"](public\assets\images\mongo-scrape-mvc.png)
