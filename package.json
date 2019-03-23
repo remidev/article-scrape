@@ -1,21 +1,21 @@
 {
-  "name": "article-scrape",
+  "name": "mongo-scraper",
   "version": "1.0.0",
-  "description": "Scrape news articles via axios &amp; cheerio. Store articles in Mongo via Mongoose. Users can comment &amp; favorite articles",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/remidev/article-scrape.git"
+    "url": "git+https://github.com/remidev/mongo-scraper.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/remidev/article-scrape/issues"
+    "url": "https://github.com/remidev/mongo-scraper/issues"
   },
-  "homepage": "https://github.com/remidev/article-scrape#readme",
+  "homepage": "https://github.com/remidev/mongo-scraper#readme",
   "dependencies": {
     "axios": "^0.18.0",
     "cheerio": "^1.0.0-rc.2",
